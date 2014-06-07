@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @topic.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @topic.category.name %>
+</p>
+
+<% Project.where(category_id: @topic.category.id)
+   .map { |project| [project, VoteItem.where(topic: @topic, project: project).count] }
+   .sort_by { |(project, score)| -score }
+   .each do |(project, score)| %>
+	<%= project.name %>
+	<%= score %>
+	<br>
+<% end %>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
