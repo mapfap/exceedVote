@@ -26,3 +26,30 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+== Installation
+
+=== Required Software
+
+1. Ruby 2.1 is preferred. Install from `www.ruby-lang.org`.  Ubuntu 12.04 and 12.10 use Ruby 1.8. Add a PPA for ruby before installing on Ubuntu with apt-get.
+1. Install Rails: `gem install rails`.
+1. Sqlite 3.
+1. A Javascript runtime such as Node.js.
+
+== Installing ExceedVote
+
+1. Clone this repository into an empty directory:
+<pre>
+git mkdir exceedcamp
+cd exceedcamp
+git clone https://github.com/mapfap/exceedVote.git
+</pre>
+1. Get bundle of gems for project.
+<pre>
+cd exceedcamp/exccedVote
+bundle install
+</pre>
+1. Create a `config/secrets.yml` file and create a secret key using `rake secret`.
+<pre>
+tba
+</pre>
