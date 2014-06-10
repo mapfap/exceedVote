@@ -53,3 +53,11 @@ bundle install
 <pre>
 tba
 </pre>
+1. Perform a database migration to create database.  Should be run from exceedVote directory.
+<pre>
+rake db:migrate RAILS_ENV=development
+</pre>
+1. Start the server.
+<pre>
+rails server
+</pre>
